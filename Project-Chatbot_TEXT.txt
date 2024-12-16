@@ -1,0 +1,105 @@
+Project - Chatbot
+# Anaconda Install ===>
+# Scripts and Library\bin file name in your systems put in environment variables.
+
+# Go to Edit Environment variable ===> Environment variable click ===>
+# Path click edit option click ===> paste the scripts folder and bin folder directories
+
+# VS Code in your system
+# Project Structure
+# Venv
+# requirements.txt file ===> Put all the packages here that are needed in our app
+# .env  ===> we will put our all secrets here
+# app.py ===> we will put our all logics here for create the application .
+
+
+# API  ===> Application Programming Interface ===> mediator ===> client to service
+# How can we create our google api key ?
+
+# Go to google ===> search makersuite api key ===> click this ===>
+# login on google  ===> click on create api key ===> it will generate api key and
+# then you have to copy it and paste it into .env file
+
+# step-1
+# Create a folder and open vs code in it .
+
+# step-2
+# open terminal and write
+# conda create -p venv python==3.10 -y
+# conda activate venv/
+
+# step-3
+# create a 'requirements.txt' file in which we have to put our packages
+# streamlit   ====> for ui
+# python-dotenv ===>connect your secrets to your app.py
+# google-generativeai ==> genai library
+
+# step-4
+# open the terminal and write
+# pip install -r requirements.txt
+
+# it will install all the packages that we have to needed in our application
+# pip stands for python Installer Packages
+
+# In app.py
+# function ==> as argument his/her query ===> google model hit ===> response return
+
+# step-4
+# from dotenv import load_dotenv
+# load_dotenv()
+
+# import streamlit as st
+# import os
+# import google.generativeai as genai
+
+# genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+
+# model = genai.GenerativeModel("gemini-pro")
+
+# def my_output(query):
+#     response = model.generate_content(query)
+#     return response.text
+
+# #### UI Development using streamlit
+
+# st.set_page_config(page_title="SMART_BOT")
+# st.header("SMART_BOT")
+# input = st.text_input("Input " , key = "input")
+# submit = st.button("Ask your query")
+
+# if submit :
+#     response = my_output(input)
+#     st.subheader("The Response is=")
+#     st.write(response)
+
+# Now open the terminal and write
+# streamlit run app.py
+
+# How can we deploy our application ???
+
+# go to github ==> create your accout
+# Install git bash
+# Project ===> open git bash
+
+# git init
+# git add app.py
+# git add requirements.txt
+# git commit -m "added"
+
+# open github ===> create a new repo ===>
+# git remote add origin https://github.com/username/project.git
+# git push -u origin master
+
+# using these commands you can deploy your application on github
+
+
+# Go to browser ===> Streamlit Cloud ==> Register with github ===>
+# create app ===> 2 options (a) you have already app (b) you want to create app
+# click already have app ==>
+# paste the github name of repo
+# branch name
+# app.py
+# advance settings ===> paste your google api key here
+# Click on deploy
+
+
